@@ -24,11 +24,11 @@ screen and save them as media in their local storage.
 
 ## Supported Features
 
-  :white_check_mark: New Wallpapers every hour
-  :white_check_mark: Searching for Wallpapers
-  :white_check_mark: Endless Stream of Wallpapers(like pinterest)
-  :white_check_mark: Setting Wallpaper on HomeScreen
-  :white_check_mark: Saving high quality images to local storage
+- :white_check_mark: New Wallpapers every hour
+- :white_check_mark: Searching for Wallpapers
+- :white_check_mark: Endless Stream of Wallpapers(like pinterest)
+- :white_check_mark: Setting Wallpaper on HomeScreen
+- :white_check_mark: Saving high quality images to local storage
   
 
 ## Packages in use
