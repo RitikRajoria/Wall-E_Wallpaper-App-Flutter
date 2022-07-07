@@ -19,7 +19,7 @@ Wall-E is an app that has a huge collection of cool-looking
 wallpapers for your home screen backgrounds.
 This app utilizes [Pexels API](https://www.pexels.com/api/documentation/) and provides a lot of cool wallpapers with categories and
 searches terms. The user can also set wallpaper on their home
-screen and also save them as media in their local storage.
+screen and save them as media in their local storage.
 
 
 ## Supported Features
