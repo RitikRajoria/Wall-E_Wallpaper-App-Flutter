@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wall-E',
       home: HomePage(),
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black.withOpacity(0.9)),
       debugShowCheckedModeBanner: false,
     );
   }

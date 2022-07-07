@@ -117,7 +117,6 @@ class _HomePageState extends State<HomePage> {
                                     height: 140,
                                     width: 180,
                                     decoration: BoxDecoration(
-                                      color: Colors.blueGrey.shade400,
                                       borderRadius: BorderRadius.circular(15),
                                       image: DecorationImage(
                                           image: AssetImage(
@@ -126,11 +125,14 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: Center(
                                         child: Container(
-                                      child: Text(name,
-                                          style: TextStyle(
-                                              fontSize: 28,
-                                              letterSpacing: 1.4,
-                                              fontWeight: FontWeight.w500)),
+                                      child: Text(
+                                        name,
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          letterSpacing: 1.4,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
                                     )),
                                   ),
                                 ),
