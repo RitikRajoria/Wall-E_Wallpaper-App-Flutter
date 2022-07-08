@@ -2,7 +2,7 @@
 
 A Flutter application to view endless stream of wallpapers and user can also download or set wallpapers using this app.
 
-<img src="Screenshots/1.png" width="180"/> &nbsp; <img src="Screenshots/1.1.png" width="180"/> &nbsp; <img src="Screenshots/2.png" width="180"/> &nbsp; <img src="Screenshots/3.png" width="180"/> &nbsp; <img src="Screenshots/4.png" width="180"/>
+<img src="Screenshots/1.png" width="180"/> &nbsp; <img src="Screenshots/1.1.jpg" width="180"/> &nbsp; <img src="Screenshots/2.png" width="180"/> &nbsp; <img src="Screenshots/3.png" width="180"/> &nbsp; <img src="Screenshots/4.png" width="180"/>
 
 ### Prerequisites
 
