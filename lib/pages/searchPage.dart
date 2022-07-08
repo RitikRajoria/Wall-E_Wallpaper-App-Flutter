@@ -21,6 +21,7 @@ class _SearchPageState extends State<SearchPage> {
   List images = [];
   int? data;
   int page = 1;
+  bool isLoading = false;
 
   TextEditingController _searchField = TextEditingController();
 
@@ -54,6 +55,7 @@ class _SearchPageState extends State<SearchPage> {
     setState(() {
       page = page + 1;
     });
+    isLoading = true;
 
     String url =
         "https://api.pexels.com/v1/search?query=$searchText&per_page=80&page=" +
@@ -65,6 +67,7 @@ class _SearchPageState extends State<SearchPage> {
       Map result = jsonDecode(value.body);
       setState(() {
         images.addAll(result['photos']);
+        isLoading = false;
       });
     });
   }
@@ -233,7 +236,20 @@ class _SearchPageState extends State<SearchPage> {
                               ],
                             ),
                       SizedBox(
-                        height: 10,
+                        height: 55,
+                        child: isLoading
+                            ? Container(
+                                child: Center(
+                                  child: CircularProgressIndicator(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )
+                            : Container(
+                                child: Center(
+                                  child: Text("No More Data!"),
+                                ),
+                              ),
                       ),
                     ],
                   ),

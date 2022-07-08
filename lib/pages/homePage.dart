@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   List images = [];
   int? data;
   int page = 1;
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -53,6 +54,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       page = page + 1;
     });
+    isLoading = true;
 
     String url =
         "https://api.pexels.com/v1/curated?per_page=80&page=" + page.toString();
@@ -63,6 +65,7 @@ class _HomePageState extends State<HomePage> {
       Map result = jsonDecode(value.body);
       setState(() {
         images.addAll(result['photos']);
+        isLoading = false;
       });
     });
   }
@@ -195,7 +198,16 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                       SizedBox(
-                        height: 10,
+                        height: 55,
+                        child: isLoading
+                            ? Container(
+                                child: Center(
+                                    child: CircularProgressIndicator(
+                                color: Colors.white,
+                              ),),)
+                            : Container(
+                                child: Center(child: Text("No More Data!"),),
+                              ),
                       ),
                     ],
                   ),

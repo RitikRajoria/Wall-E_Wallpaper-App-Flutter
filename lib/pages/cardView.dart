@@ -19,6 +19,7 @@ class _CardViewState extends State<CardView> {
   List images = [];
   int? data;
   int page = 1;
+  bool isLoading = false;
 
   fetchSearchApi(String cardText) async {
     await http.get(
@@ -45,6 +46,7 @@ class _CardViewState extends State<CardView> {
     setState(() {
       page = page + 1;
     });
+    isLoading = true;
 
     String url =
         "https://api.pexels.com/v1/search?query=$cardText&per_page=80&page=" +
@@ -56,6 +58,7 @@ class _CardViewState extends State<CardView> {
       Map result = jsonDecode(value.body);
       setState(() {
         images.addAll(result['photos']);
+        isLoading = false;
       });
     });
   }
@@ -156,7 +159,20 @@ class _CardViewState extends State<CardView> {
                               ],
                             ),
                       SizedBox(
-                        height: 10,
+                        height: 55,
+                        child: isLoading
+                            ? Container(
+                                child: Center(
+                                  child: CircularProgressIndicator(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )
+                            : Container(
+                                child: Center(
+                                  child: Text("No More Data!"),
+                                ),
+                              ),
                       ),
                     ],
                   ),
